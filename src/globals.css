@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { --sky-400:#38bdf8; --sky-500:#0ea5e9; }
+.dark { --sky-400:#38bdf8; --sky-500:#0ea5e9; }
+#estate-cards{--background:48 27% 94%;--foreground:144 20% 16%;--card:48 29% 96%;--card-foreground:144 20% 16%;--primary:148 25% 23%;--primary-foreground:45 30% 94%;--muted:44 17% 87%;--muted-foreground:135 10% 36%;--accent:38 35% 85%;--accent-foreground:148 25% 20%;--secondary:44 20% 89%;--secondary-foreground:145 20% 20%;--destructive:0 65% 45%;--destructive-foreground:0 0% 100%;--border:43 15% 77%;--input:43 15% 77%;--ring:144 20% 28%;--radius:1rem;margin-top:32px}
+#estate-cards .estate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+#estate-cards .flip-inner{transition:transform 760ms cubic-bezier(.22,.72,.22,1);transform-style:preserve-3d}
+#estate-cards .flip-inner[data-flipped=true]{transform:rotateY(180deg)}
+#estate-cards .flip-face{backface-visibility:hidden;-webkit-backface-visibility:hidden;transform-style:preserve-3d;box-shadow:0 8px 28px #24322813}
+#estate-cards .flip-face[aria-hidden=true]{pointer-events:none;visibility:hidden;transition:visibility 0s linear 400ms}
+#estate-cards .flip-face[aria-hidden=false]{visibility:visible;transition:visibility 0s linear 0s}
+#estate-cards .estate-title{font:650 clamp(1.65rem,2.7vw,2.25rem)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.055em;color:#24372a;margin:0;transition:color .25s;text-shadow:none}
+#estate-cards .estate-title:hover{color:#916c48}
+#estate-cards .estate-copy{font-size:13px;line-height:1.55;margin:0}
+#estate-cards button,#estate-cards a{font-family:inherit;cursor:pointer}
+#estate-cards .swiper-nav{color:#233a2b;background:#f7f3e7e8;border:1px solid #fff9;box-shadow:0 3px 14px #14251924;transition:background .2s,transform .2s;min-height:34px;min-width:34px}
+#estate-cards .swiper-nav:hover{background:white;transform:scale(1.06)}
+#estate-cards .swiper-window{isolation:isolate;touch-action:pan-y}
+#estate-cards .swiper-window img{height:100%;width:100%;object-fit:cover;max-width:none}
+#estate-cards .flip-action{min-height:44px;border:1px solid #b7c0ad;padding:10px 13px;color:#2c4835;background:transparent;display:flex;align-items:center;justify-content:space-between;gap:8px;border-radius:10px;font-size:12px;font-weight:650;transition:background .25s,color .25s}
+#estate-cards .flip-action:hover{background:#314b38;color:#fff}
+#estate-cards .backAction{background:#314b38;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border-radius:10px;padding:11px;font-size:13px;font-weight:650}
+#estate-cards .backAction:hover{background:#20382a}
+#estate-cards .back-feature{min-width:0;padding:12px 6px;border:1px solid #d3cdbf;background:#eae8dd;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;font-size:11px;line-height:1.25;text-align:center;font-weight:600}
+#estate-cards .swipe-dot{min-height:12px;min-width:12px;padding:0;display:grid;place-items:center;border:0;background:none}
+#estate-cards .swipe-dot:after{content:'';width:6px;height:6px;border-radius:50%;background:#dce0d4;opacity:.6}
+#estate-cards .swipe-dot[aria-current=true]:after{background:white;opacity:1}
+#estate-cards .swipe-dot:focus-visible,#estate-cards button:focus-visible,#estate-cards a:focus-visible{outline:2px solid #ae8457;outline-offset:3px}
+@media(max-width:1050px){#estate-cards .estate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){#estate-cards .estate-grid{grid-template-columns:1fr;gap:18px}}
+@media(prefers-reduced-motion:reduce){#estate-cards .flip-inner{transition:none!important}#estate-cards .flip-face{transition:none!important}}
