@@ -1,0 +1,44 @@
+{
+  "redirects": [
+    {
+      "source": "/properties.html",
+      "destination": "/#properties",
+      "permanent": false
+    },
+    {
+      "source": "/services.html",
+      "destination": "/#method",
+      "permanent": false
+    },
+    {
+      "source": "/about.html",
+      "destination": "/#firm",
+      "permanent": false
+    },
+    {
+      "source": "/tools.html",
+      "destination": "/#tools",
+      "permanent": false
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/#contact",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
