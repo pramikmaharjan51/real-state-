@@ -30,3 +30,5 @@
 @media(max-width:1050px){#estate-cards .estate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){#estate-cards .estate-grid{grid-template-columns:1fr;gap:18px}}
 @media(prefers-reduced-motion:reduce){#estate-cards .flip-inner{transition:none!important}#estate-cards .flip-face{transition:none!important}}
+
+.hero h1 .wordTouch{display:inline;overflow:visible;padding:0;margin:0}
